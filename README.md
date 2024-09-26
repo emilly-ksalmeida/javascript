@@ -1,2 +1,2 @@
 # javascript
- Curso de JavaScript do CursoemVideo
+ Projetos do curso de JavaScript do CursoemVideo e outros projetos independentes.
