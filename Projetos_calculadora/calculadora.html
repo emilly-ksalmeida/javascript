@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylecalc.css">
+    <link rel="shortcut icon" href="hamster.ico" type="image/x-icon">
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <main>
+      <section id="espacotela">
+        <div id="tela"></div>
+      </section>
+      <section id="espacobotoes">
+        <div class="todosbotoes">
+            <input type="button" value="7" class="botao" onclick="clickNoBotao(7)"> <input type="button" value="8" class="botao" onclick="clickNoBotao(8)">
+            <input type="button" value="9" class="botao" onclick="clickNoBotao(9)"> <input type="button" value="C" id="botaolimpar" onclick="clickNoBotaoLimpar()">
+          </div>
+    
+          <div class="todosbotoes">
+            <input type="button" value="4" class="botao" onclick="clickNoBotao(4)"> <input type="button" value="5" class="botao" onclick="clickNoBotao(5)">
+            <input type="button" value="6" class="botao" onclick="clickNoBotao(6)"> <input type="button" value="/" class="opbotao" onclick="clickNoBotao('/')">
+          </div>
+    
+          <div class="todosbotoes">
+            <input type="button" value="1" class="botao" onclick="clickNoBotao(1)"> <input type="button" value="2" class="botao" onclick="clickNoBotao(2)">
+            <input type="button" value="3" class="botao" onclick="clickNoBotao(3)"> <input type="button" value="x" class="opbotao" onclick="clickNoBotao('x')">
+          </div>
+    
+          <div class="todosbotoes">
+            <input type="button" value="0" class="botao" onclick="clickNoBotao(0)"> <input type="button" value="+" class="opbotao" onclick="clickNoBotao('+')">
+            <input type="button" value="-" class="opbotao" onclick="clickNoBotao('-')"> <input type="button" value="=" id="botaoigual" onclick="clickNoBotaoIgual()">
+          </div>
+      </section>
+    </main>
+    <footer><p>Calculadora da Emilly &#x1F439;</p></footer>
+<script src="scriptcalc.js"></script>
+  </body>
+</html>

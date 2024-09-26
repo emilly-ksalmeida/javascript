@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Jersey+15+Charted&family=Love+Ya+Like+A+Sister&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Jersey+15+Charted&family=Love+Ya+Like+A+Sister&family=Sarpanch:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+:root {
+    --fontetela: 'Jersey 15 Charted', sans-serif;
+    --fontebotoes: 'Sarpanch', sans-serif;
+    --fonterodape: 'Sacramento', cursive;
+}
+* {
+    border: 0px;
+}
+
+body {
+    background-color: white;
+}
+main {
+margin: auto;
+background-color: rgb(106, 124, 242);
+width: 430px;
+height: 500px;
+border-radius: 25px;
+box-shadow: 10px 10px 20px rgb(145, 144, 144);
+}
+footer {
+    margin: auto;
+    text-align: center;
+    font-family: var(--fonterodape);
+    font-size: 1.5em;
+}
+#espacotela {
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(220, 229, 230);
+    border-radius: 25px 25px 0px 0px;
+}
+#espacobotoes {
+    margin: auto;
+    width: 340px;
+    padding: 15px;
+    
+}
+#tela {
+    font-family: var(--fontetela);
+    font-size: 80px;
+    color: rgb(0, 0, 0);
+    width: 500px;
+    height: 80px;
+}
+.botao {
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+    background-color: darkorange;
+    font-family: var(--fontebotoes);
+    font-size: 2.5em;
+    border-radius: 25px;
+}
+
+.opbotao {
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+    background-color: rgb(238, 255, 0);
+    font-family: var(--fontebotoes);
+    font-size: 2.5em;
+    border-radius: 25px;
+}
+
+#botaolimpar {
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+    background-color: rgb(3, 43, 112);
+    font-family: var(--fontebotoes);
+    color: white;
+    font-size: 2.5em;
+    border-radius: 25px;
+}
+
+#botaoigual {
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+    background-color: rgb(112, 3, 43);
+    font-family: var(--fontebotoes);
+    color: white;
+    font-size: 2.5em;
+    border-radius: 25px;
+}
+
+div.todosbotoes {
+    padding-bottom: 5px;
+}
