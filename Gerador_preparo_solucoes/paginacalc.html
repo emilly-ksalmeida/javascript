@@ -1,68 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Preparo de Soluções</title>
-    <link rel="stylesheet" href="#">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="#" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+  </head>
+  <body>
     <header>
-<h1>Gerador de Método de Preparo de Soluções</h1>
+      <h1>Gerador de Método de Preparo de Soluções</h1>
     </header>
     <main>
-<section>
+      <section>
+        <h2>Título</h2>
 
-<h2>Título</h2>
+        <form action="#" method="post">
+          <p>
+            <label for="composto">Composto: </label>
 
-<form action="#" method="post">
-    <p>
-        <label for="composto">Composto: </label>
-        
-        <select name="composto" id="composto">
+            <select name="composto" id="composto" required>
+              <option value="" selected>---Escolha---</option>
 
-            <option value="" selected>---Escolha---</option>
-            
-            <optgroup label="Ácido inorgânicos">
-            <option value="ácido clorídrico">ácido clorídrico</option>
-            <option value="ácido nítrico">ácido nítrico</option>
-            <option value="ácido sulfúrico">ácido sulfúrico</option>
-            <option value="ácido fosfórico">ácido fosfórico</option>
-            </optgroup>
-            
-        </select>
-    </p>
-    <p>
-        <label for="concentracao">Concentração molar desejada (mol/L): </label>
-        <input type="number" name="iconcentracao" id="concentracao">
-    </p>
-    <p>
-        <label for="volumeTotal">Volume total (mL): </label>
-        <input type="number" name="ivolumeTotal" id="volumeTotal">
-    </p>
-    <p>
-        <input type="button" value="Calcular" onclick="calcular()">
-        <input type="reset" value="Limpar">
-        <input type="button" value="Imprimir">
-    </p>
-</form>
-
-</section>
-<section id="espacoResultado">
-
-</section>
+              <optgroup label="Ácido inorgânicos">
+                <option value="ácido clorídrico">ácido clorídrico</option>
+                <option value="ácido nítrico">ácido nítrico</option>
+                <option value="ácido sulfúrico">ácido sulfúrico</option>
+                <option value="ácido fosfórico">ácido fosfórico</option>
+              </optgroup>
+            </select>
+          </p>
+          <p>
+            <label for="concentracao">Concentração molar desejada (mol/L): </label>
+            <input type="number" name="iconcentracao" id="concentracao" required min="0" max="1000"/>
+          </p>
+          <p>
+            <label for="volumeTotal">Volume total (mL): </label>
+            <input type="number" name="ivolumeTotal" id="volumeTotal" required/>
+          </p>
+          <p>
+            <input type="submit" value="Calcular" onclick="calcular()">
+            <input type="reset" value="Limpar" />
+            <input type="button" value="Imprimir" />
+          </p>
+        </form>
+      </section>
+      <section id="espacoResultado"></section>
     </main>
     <footer>
-<p>Este é um projeto para estudo de JavaScript realizado por <strong>EmillyK</strong></p>
+      <p>
+        Este é um projeto para estudo de JavaScript realizado por
+        <strong>EmillyK</strong>
+      </p>
     </footer>
-<script>
-let compostoSelect = document.querySelector('#composto')
-function calcular() {
-    window.alert(compostoSelect.value)
-}
+    <script>
+      const listaCompostosAcidos = [
+        {
+          id: 1,
+          nome: "ácido clorídrico",
+          peso: 36.46,
+          densidade: 1.19,
+          rotulado: 37
+        },
+        {
+          id: 2,
+          nome: "ácido sulfúrico",
+          peso: 98.08,
+          densidade: 1.83,
+          rotulado: 98
+        },
+        {
+          id: 3,
+          nome: "ácido fosfórico",
+          peso: 97.99,
+          densidade: 1.88,
+          rotulado: 85
+        },
+        {
+          id: 4,
+          nome: "ácido nítrico",
+          peso: 63.01,
+          densidade: 1.51,
+          rotulado: 65
+        },
+      ];
 
-</script>
-</body>
+      let compostoSelect_form = document.querySelector("#composto");
+      let concMolarInput_form = document.querySelector("#concentracao");
+      let volumeTotalInput_form = document.querySelector("#volumeTotal");
+      
+      function calcular() {
+        let compostoSelect = compostoSelect_form.value;
+        let concMolarInput = Number(concMolarInput_form.value);
+        let volumeTotalInput = Number(volumeTotalInput_form.value);
+
+        window.alert(`O composto selecionado é ${compostoSelect}, a molaridade é ${concMolarInput} M e volume total final ${volumeTotalInput} mL.`);
+      }
+    </script>
+  </body>
 </html>
